@@ -6,8 +6,10 @@ public class Project1 {
     static int hitung(int n) {
         if (n <= 1) {
             return 1;
-        } else { // debug teori, untuk menghitung faktorial penjumlahan
+        } else if (n % 2 != 0){ // debug teori, untuk menghitung faktorial penjumlahan
             return n + hitung(n - 1);
+        } else {
+            return n - hitung(n - 2);
         }
     }
 
@@ -15,19 +17,15 @@ public class Project1 {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Masukkan angka : ");
-        try {
-            int angka = input.nextInt();
+        int angka = input.nextInt();
 
-            int hasil = hitung(angka);
+        int hasil = hitung(angka);
 
-            if (hasil % 2 == 0) {
-                System.out.println("\nGenap-" + hasil);
-            }
-            else {
-                System.out.println("\nGanjil-" + (hasil + 1));
-            }
-        } catch (Exception e) {
-            System.out.println("Input tidak valid.");
+        if (hasil % 2 == 0) {
+            System.out.println("\nGenap-" + hasil);
+        }
+        else {
+            System.out.println("\nGanjil-" + (hasil + 1));
         }
 
     }
