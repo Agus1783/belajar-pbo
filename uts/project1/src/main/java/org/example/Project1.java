@@ -6,8 +6,10 @@ public class Project1 {
     static int hitung(int n) {
         if (n <= 1) {
             return 1;
-        } else { // debug teori, untuk menghitung faktorial penjumlahan
+        } else if (n % 2 != 0){ // debug teori, untuk menghitung faktorial penjumlahan
             return n + hitung(n - 1);
+        } else {
+            return n - hitung(n - 2);
         }
     }
 
