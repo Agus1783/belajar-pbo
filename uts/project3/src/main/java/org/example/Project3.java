@@ -1,4 +1,4 @@
-package org.example;
+package uts.org.example;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Project3 {
         System.out.println("Masukkan angka z : ");
         z = input.nextInt();
 
-        if ((x > y && z > y)) {
+        if ((x > y && z)) {
             if (z / y > 2 && x % 3 != 0) System.out.println("Alpha");
             else System.out.println("Beta");
         } else if (x - y < z / 3) {
