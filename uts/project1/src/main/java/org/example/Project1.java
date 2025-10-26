@@ -17,19 +17,15 @@ public class Project1 {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Masukkan angka : ");
-        try {
-            int angka = input.nextInt();
+        int angka = input.nextInt();
 
-            int hasil = hitung(angka);
+        int hasil = hitung(angka);
 
-            if (hasil % 2 == 0) {
-                System.out.println("\nGenap-" + hasil);
-            }
-            else {
-                System.out.println("\nGanjil-" + (hasil + 1));
-            }
-        } catch (Exception e) {
-            System.out.println("Input tidak valid.");
+        if (hasil % 2 == 0) {
+            System.out.println("\nGenap-" + hasil);
+        }
+        else {
+            System.out.println("\nGanjil-" + (hasil + 1));
         }
 
     }
