@@ -32,7 +32,6 @@ public class SoalDua {
             System.out.println("Sub Total: " + SubTotal);
             barang++;
         }
-
         System.out.println("------------------------------------------------- +");
         System.out.println("Total belanja yang harus dibayar: Rp." + TotalBelanja);
     }
